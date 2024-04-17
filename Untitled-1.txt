@@ -1,0 +1,30 @@
+fun main(args: Array<String>){
+    printIn ("Hello World!")
+}
+
+t_RESERVADA = r'Mi|primer|Web|Hola|mundo|!'
+t_DOCTYPE = r'DOCTYPE|html'
+t_IDENTIFICADOR= r'HTML|head|title|body|h1'
+t_MAYOR = r'\>'
+t_MENOR = r'\<'
+t_FIN = r'\/'
+
+MENOR RESERVADA DOCTYPE DOCTYPE MAYOR 
+MENOR IDENTIFICADOR MAYOR 
+    MENOR IDENTIFICADOR MAYOR 
+            MENOR IDENTIFICADOR MAYOR RESERVADA RESERVADA RESERVADA MENOR FIN IDENTIFICADOR MAYOR
+        MENOR FIN IDENTIFICADOR MAYOR
+    MENOR IDENTIFICADOR MAYOR
+        MENOR IDENTIFICADOR MAYOR RESERVADA RESERVADA RESERVADA MENOR FIN IDENTIFICADOR MAYOR
+    MENOR FIN IDENTIFICADOR MAYOR
+MENOR FIN IDENTIFICADOR MAYOR
+
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <title> Mi primer Web </title>
+    </head>
+    <body>
+        <h1> Hola mundo! </h1>
+    </body>
+</HTML>

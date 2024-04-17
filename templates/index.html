@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Léxico y Sintáctico</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="entrada">
+        <h1>Análisis Léxico y Sintáctico</h1>
+
+        <form action="/" method="post">
+            <label for="source_code" >Código a analizar:</label> <br>
+            <textarea id="source_code" class="Analizar" name="source_code" rows="10" cols="50"></textarea><br>
+            <button type="submit" class="boton">Analizar</button>
+        </form>
+    </div>
+
+    <div class="cuadro">
+        <div class="lexico">
+            <h2>Resultado del análisis léxico:</h2>
+            <div id="lexical_result" class="results">
+                {% if lexical_result %}
+                    <ul>
+                        {% for token_type, token_value in lexical_result %}
+                            <li>{{ token_type }}: {{ token_value }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+            </div>
+        </div>
+
+        <div class="sintactico">
+            <h2>Resultado del análisis sintáctico</h2>
+            <div id="syntax_result" class="results">
+                {% if syntax_result %}
+                    <p>{{ syntax_result }}</p>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
